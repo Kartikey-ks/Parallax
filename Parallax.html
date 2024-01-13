@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Parallax.css">
+  <title>Parallax</title>
+</head>
+<body>
+  <header>
+    <div class="header">
+        <div class="home">
+            <a href="ree.html" class="nav-a">Home</a>
+        </div>
+        <div class="contact" id="contactus">
+            <a href="Form.html" class="nav-a" id="delayedLink">Contact Us</a>
+        </div>
+        <div class="support">
+            <a href="#" class="nav-a">Support</a>
+        </div>
+    </div>
+</header>
+
+  <main>
+    <div class="parallax-h1" id="link-1">
+      <h1 class="heading">Illusionary Horizons</h1>
+    </div>
+    <div class="parallax-p">
+      <p>Creating a captivating parallax scrolling website involves seamlessly blending design and functionality to provide users with an engaging and immersive experience. <br> With parallax scrolling, you can achieve a visually stunning effect where background images move at different speeds as users scroll down the page.</p>
+    </div>
+    <div class="parallax-h2" id="link-2">
+      <h1 class="heading">The Symphony Of Scrolling</h1>
+    </div>
+    <div class="parallax-p">
+      <p>This dynamic element adds depth and dimension, enhancing the overall aesthetics of your website. <br> By carefully selecting and optimizing images, you can ensure a smooth and fluid parallax effect that captivates your audience.</p>
+    </div>
+    <div class="parallax-h3" id="link-3">
+      <h1 class="heading">Parallax Is Cool</h1>
+    </div>
+    <div class="parallax-p">
+      <p>Thankyou for showing interest, I used HTML, CSS and JavaScript to achieve this effect. <br> I hope found this helpful. Let's learn and grow together.</p>
+    </div>
+    <footer>
+      <div class="back">
+        <div class="btt-bg">
+        <a href="#" class="btt">Back To Top</a>
+      </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrolled = window.scrollY;
+      document.querySelector('.parallax-h1').style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+      document.querySelector('.parallax-h2').style.backgroundPositionY = -(scrolled * 0.3) + 'px';
+      document.querySelector('.parallax-h3').style.backgroundPositionY = -(scrolled * 0.2) + 'px';
+    });
+
+   /* document.addEventListener('DOMContentLoaded', function() {
+      const scrollSpeed = 1; // Adjust the scroll speed as needed
+
+      window.addEventListener('wheel', function(event) {
+        event.preventDefault();
+        const delta = Math.sign(event.deltaY);
+        window.scrollBy(0, delta * scrollSpeed);
+      });
+    });
+   /* document.getElementById('delayedLink').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevents the default immediate navigation behavior
+
+        // Set a delay, for example, 2000 milliseconds (2 seconds)
+        setTimeout(function () {
+            // Perform the navigation after the delay
+            window.location.href = event.target.href;
+        }, 2000);
+    });*/
+  </script>
+</body>
+</html>
